@@ -1,0 +1,384 @@
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+
+}
+button{
+    padding: 16px 25px;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    padding: 16px 25px;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transform: scale(1.08, 1.08);
+}
+:root{
+    --main-color: red;
+    --heading-font:'Ibarra Real Nova', serif;
+    --secondary-font:'Lato', sans-serif;
+
+}
+a{
+    text-decoration: none;
+}
+/* Styling Starts Here */
+
+
+/* Banner style start here */
+.banner{
+    background-color: #161616;
+    margin: 50px 0px;
+    border-radius: 30px;
+    padding: 50px 50px 0px 105px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.banner-col-one {
+    width: 56%;
+}
+.banner-col-two {
+    width: 44%;
+}
+.banner-col-one> h1, p{
+    color:white;
+}
+.banner-col-one h1{
+    font-family: var(--heading-font);
+    font-size: 65px;
+    font-weight: 700;
+    line-height: .9em;
+    margin: 0;
+}
+.banner-col-one p{
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    line-height: 1.5em;
+    padding: 15px 0px;
+}
+.banner-col-one i{
+    margin-left:10px;
+}
+.banner-col-one button{
+    background-color: var(--main-color);
+    color: white;
+}
+.banner-col-two img{
+    height: 522px;
+    animation: zoom 1s linear;
+}
+@keyframes zoom {
+    0% {
+      transform: scale(0, 0);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+/* Banner style end here */
+
+/* Blogs style Start Here */
+
+.blog-section{
+    margin-top: 130px;
+    display: flex;
+}
+/* Blog button section style start here */
+.blog-button{
+    width: 312px;
+}
+.button-bg{
+    text-align: center;
+    background-color: #161616;
+    padding: 15px;
+    border-radius: 10px;    
+}
+.blog-button button{
+    margin: 10px;
+    width: 90%;
+}
+#active button{
+   background-color: var(--main-color);
+   color: white;
+}
+/* Blog button section style end here */
+
+/* blog content styling start here */
+.blogs{
+    width: 75%;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+.blogs div{
+    border: 1px solid #E8E8E8;
+    width: 94%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    transition: 0.3s ease-in-out;
+}
+.blogs div:hover{
+    border: 1px solid #E8E8E8;
+    width: 94%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+.blogs img{
+    margin-bottom: 15px;
+    width: 312px;
+    height: 175px;
+    border-radius: 5px 5px 0px 0px;
+}
+.blogs span{
+    color: #161616;
+    border: 1px solid #161616;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.blogs h4{
+    color: var(--main-color);
+}
+.blogs h4, i{
+    margin-left: 15px;
+}
+.button-tab{
+    display: none;
+}
+/* blog content styling end here */
+
+/* Upcoming section style start here */
+.upcoming-match{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.upcoming-match-content{
+    text-align: center;
+    border: 1px solid #E8E8E8;
+    border-radius: 15px;
+    padding: 25px;
+    height: fit-content;
+    margin: 10px;
+}
+.upcoming-match-img{
+    display: flex;
+    align-items: center;
+}
+.upcoming-match-img img {
+    width: 100%;
+}
+.upcoming-match-img span{
+    padding: 0px 10px;
+}
+.upcoming-match-content p{
+    color: black;
+}
+/* Upcoming section style end here */
+
+
+/* Footer Section Styling Start Herer */
+
+footer{
+    background-color: #161616;
+}
+.footer-content{
+    text-align: center;
+    padding: 100px;
+}
+.logo{
+    color: white;
+    font-size: 40px;
+}
+.footer-content> hr{
+    height: 1px;
+    background-color: #ccc;
+    border: none;}
+footer ul{
+    display: flex;
+    justify-content: center;
+}
+footer ul li{
+    list-style: none;
+    padding: 30px 15px 15px 15px;
+    color: white;
+}
+.social-icons i{
+    color:white;
+}
+/* Footer Section Styling End Herer */
+
+
+/**************************
+
+Media Quries CSS Start here
+
+***************************/
+
+/*mobile view device style*/
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 90%;
+    }
+
+ /* banner section mobile css start here */
+    .banner{
+        flex-direction: column;
+        padding: 30px 0px;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .banner-col-one h1{
+        font-size: 30px;
+    }
+    .banner-col-two img{
+        height: 250px;
+    }
+    .banner-col-one {
+        width: 95%;
+    }
+    .banner-col-two {
+        width: 100%;
+    }
+ /* banner section mobile css end here */
+
+ /* blog section mobile css start here */
+ .blogs{
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-left: 0;
+ }
+
+ .blog-section{
+    margin-top: 0;
+    flex-direction: column;
+ }
+ .blog-button{
+    width: 100%;
+}
+.button-bg{
+    background-color: white;
+}
+.blogs div{
+    width: 100%;
+}
+.blogs img{
+    width: 100%;
+    height: auto;
+}
+.upcoming-match{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/* blog section mobile css end here */
+
+/* Footer section mobile css start here */
+
+footer ul{
+    flex-direction: column;
+    padding: 0;
+}
+footer ul a li{
+    margin: 0;
+}
+/* Footer section mobile css end here */
+}
+
+/******
+Mobile view css end here
+*******/
+
+
+/* Tab view css start herer */
+
+@media only screen and (min-width: 689px) and (max-width:992px){
+.container{
+        width: 95%;
+    }
+button{
+        margin-bottom: 30px;
+    }
+.button-tab {
+        display: block;
+        text-align: center;
+    }
+.button-tab-bg{
+        background-color: red;
+        color: white;
+    }
+.banner-col-one {
+        width: 48%;
+    }
+.banner-col-two {
+        width: 45%;
+    }
+.banner-col-two img {
+        height: 440px;
+    }
+.banner-col-one h1 {
+        font-size: 45px;
+    }
+.blog-section{
+        margin-top: 130px;
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+.blogs div:last-child{
+        display: none;
+    }
+.blog-button{
+        width: 100%;
+    }
+.button-bg{
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+.blogs{
+        width: 100%;
+        margin-left: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+.blogs img {
+        width: 100%;
+}
+
+.upcoming-match{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.upcoming-match div:last-child{
+    display: none;
+}
+footer ul a{
+    font-size: 13px;
+}
+footer ul li {
+    padding: 30px 5px 15px 5px;
+}
+}
